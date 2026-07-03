@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n = 5;
+    int arr[n]={1,2,3,4,5};
+    int target = 7;
+    int left = 0;
+    int right = n-1;
+    //tow pointer approch
+    while (left <right)
+    { int sum = arr[left] + arr[right];
+        if(sum == target){
+            cout<<" target achived : "<<arr[left]<<"+"<<arr[right]<<"="<<target<<endl;
+            break;
+        }
+        else if (sum > target){
+            right--;
+        }
+        else if(sum < target){
+            left++;
+        }
+}
+    return 0;
+    
+}
